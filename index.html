@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Responsive wireframe</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="rootContainer">
+        <header class="header">
+            <img class="header_logo" src="images/logo.jpg">
+            <h1 class="header_title">Company Name</h1>
+        </header>
+
+
+        <nav class="mainMenu" id="menu">
+            <div class="mainMenu_toggle">
+                <span class="mainMenu_toggle__closed">
+                    <a href="#menu">Menu</a>
+                </span>
+                <span class="mainMenu_toggle__opened">
+                    <a href="#">Close menu</a>
+                </span>
+            </div>
+
+            <ul class="mainMenu_items">
+                <li class="mainMenu_link">
+                    <a href="/">Home</a>
+                </li>
+                <li class="mainMenu_link">
+                    <a href="/ebooks">eBooks</a>
+                </li>
+                <li class="mainMenu_link">
+                    <a href="/magazines">Magazines</a>
+                </li>
+                <li class="mainMenu_link">
+                    <a href="/movies">Movies</a>
+                </li>
+                <li class="mainMenu_link">
+                    <a href="/help">Help</a>
+                </li>
+                <li class="mainMenu_link">
+                    <a href="/login">Login</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h1 class="content_title">Lorem Ipsum Dolor Sit</h1>
+            <div class="content_published">
+                posted on <span class="content_date">15 May 2015</span>
+                by <span class="content_author">Author</span>
+            </div>
+
+            <picture>
+                <source srcset="images/content_image-wide.jpg" media="(min-width: 600px)">
+                <img class="content_image" src="images/content_image-narrow.jpg" alt="Image in 4:3 ratio">
+            </picture>
+
+            <div class="content_article">
+                <article class="article">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam fermentum. Integer fringilla. Integer fringilla. Pellentesque ac turpis. Sed elementum, felis quis porttitor sollicitudin, augue nulla sodales sapien, amet posuere quam purus at lacus. Nam id neque. Morbi pulvinar nulla sit amet nisl. Etiam pharetra lacus sed velit imperdiet bibendum.</p>
+                    <p>Sed quis elit. In hac habitasse platea dictumst. Maecenas justo. Donec interdum vestibulum libero. Nam laoreet dui sed magna. Nam consectetuer mollis dolor. Aenean ligula. Aliquam sed erat. Donec interdum vestibulum libero. Mauris et dolor.</p>
+                </article>
+
+                <div class="content_relatedLinks">
+                    <h3 class="content_relatedLinks_title">More&hellip;</h3>
+                    <ul class="content_relatedLinks_list">
+                        <li class="content_relatedLinks_item">
+                            <a href="article/one">Link #1</a>
+                        </li>
+                        <li class="content_relatedLinks_item">
+                            <a href="article/two">Another link</a>
+                        </li>
+                        <li class="content_relatedLinks_item">
+                            <a href="article/three">Third link</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <div class="socialIcons">
+            <a href="https://facebook.com/" class="socialIcons_link">
+                <img class="socialIcons_image" src="images/facebook.png">
+            </a>
+            <a href="https://twitter.com/" class="socialIcons_link">
+                <img class="socialIcons_image" src="images/twitter.png">
+            </a>
+            <a href="https://plus.google.com/" class="socialIcons_link">
+                <img class="socialIcons_image" src="images/google.png">
+            </a>
+        </div>
+
+        <div class="sideLinks">
+            <div class="sideLinks_item">
+                <h3 class="sideLinks_item_title">A guide to snoopsetting</h3>
+                <img class="sideLinks_item_image" src="images/side_image.jpg">
+            </div>
+            <div class="sideLinks_item">
+                <h3 class="sideLinks_item_title">Welcome to the Surveillance State</h3>
+                <img class="sideLinks_item_image" src="images/side_image.jpg">
+            </div>
+        </div>
+
+        <footer class="footer">
+            At the bottom
+        </footer>
+    </body>
+</html>

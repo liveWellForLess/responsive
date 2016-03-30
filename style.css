@@ -1,0 +1,183 @@
+/* page layout */
+.rootContainer {
+    margin: 0 1em;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.header,
+.socialIcons,
+.mainMenu,
+.content,
+.sideLinks,
+.footer
+{
+    flex: 1 100%;
+}
+
+.sideLinks {
+    /* hidden on mobile */
+    display: none;
+}
+
+
+/* header */
+.header_logo {
+    width: 60px;
+    height: 60px;
+}
+.header_title {
+    display: inline-block;
+    margin: 0;
+    line-height: 60px;
+    vertical-align: top;
+}
+
+/* menu toggle using :target only works in IE8+ */
+.mainMenu_toggle__opened {
+    display: none;
+}
+.mainMenu_toggle__closed {
+    display: block;
+}
+.mainMenu_items {
+    display: none;
+}
+#menu:target .mainMenu_toggle__closed {
+    display: none;
+}
+#menu:target .mainMenu_toggle__opened {
+    display: block;
+}
+#menu:target .mainMenu_items {
+    display: block;
+}
+
+/* menu display */
+.mainMenu {
+    text-align: center;
+    margin-top: 0.4em;
+}
+.mainMenu_toggle {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 0.5em 1em;
+    background: #eee;
+}
+.mainMenu_toggle a,
+.mainMenu_toggle a:visited {
+    color: black;
+    text-decoration: none;
+}
+.mainMenu_items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.mainMenu_link {
+    /* make the tap area big enough for my finger */
+    line-height: 48px;
+}
+
+/* content styling */
+.content_image {
+    max-width: 100%;
+}
+.sideLinks_item_image {
+    max-width: 200px;
+}
+
+/* furniture styling */
+.socialIcons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.socialIcons_image {
+    width: 40px;
+}
+
+/* footer */
+.footer {
+    background: #eee;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+}
+
+@media all and (min-width: 600px) {
+    /* page layout */
+    .header {flex: 1 1 auto;}
+    .sideLinks {
+        display: block;
+    }
+
+    .header {
+        /* header takes 3/4 of the space, the other quarter is for socialIcons */
+        order: 1;
+        flex: 3 auto;
+    }
+    .socialIcons {
+        order: 2;
+        flex: 0 auto;
+    }
+    .mainMenu {
+        order: 3;
+    }
+    .content {
+        order: 4;
+        flex: 3 0 600px;
+        margin-right: 1em;
+    }
+    .sideLinks {
+        order: 5;
+        flex: 0 25%;
+    }
+    .footer {
+        order: 6;
+    }
+
+    /* menu display, always visible on large screens */
+    .mainMenu_toggle {
+        display: none;
+    }
+    .mainMenu_items {
+        display: block;
+    }
+    .mainMenu_items {
+        border: 1px solid #ccc;
+        display: flex;
+        background: #eee;
+        justify-content: space-around;
+    }
+    .mainMenu_link a,
+    .mainMenu_link a:visited {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* float related content */
+    .content_article {
+        position: relative;
+    }
+    .content_article:before {
+        content: ' ';
+        float: right;
+        display: block;
+        width: 150px;
+        height: 100px;
+    }
+    .content_relatedLinks {
+        width: 150px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .content_relatedLinks_title {
+        margin: 0;
+    }
+    .content_relatedLinks_list {
+        margin: 0;
+        padding: 0 1.5em;
+    }
+}
